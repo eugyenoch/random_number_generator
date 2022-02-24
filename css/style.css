@@ -1,0 +1,67 @@
+/*
+* @title style.css for random_number_generator
+* @description This software provides the styling for the random number generator
+* Copyright (c) 2022 Eugy Enoch
+*Permission is hereby granted, free of charge, to any person obtaining a copy
+*of this software and associated documentation files (the "Software"), to deal
+*in the Software without restriction, including without limitation the rights
+*to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+*copies of the Software, and to permit persons to whom the Software is
+*furnished to do so, subject to the following conditions:
+*The above copyright notice and this permission notice shall be included in all
+*copies or substantial portions of the Software.
+*THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+*IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+*FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+*AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+*LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+*OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+*SOFTWARE.
+* @contact https://github.com/eugyenoch
+*/
+
+*{box-sizing: border-box;}
+
+@font-face{
+	font-family:abeeze;
+	src: url('../font/abeeze/ABeeZee-Regular.ttf');
+}
+
+@font-face{
+	font-family:abeezeItalic;
+	src: url('../font/abeeze/ABeeZee-Italic.ttf');
+	font-style: italics;
+}
+
+body{
+	font-family:abeeze,tahoma;
+	background-image:url('../image/download.png');
+	background-attachment: fixed;
+}
+
+.main{
+	width: 100%;
+	height: auto;
+	border: 1px solid black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+
+.main > div{
+	width: 18%;
+	height: 190px;
+	border: 1px solid black;
+	float: left;
+	margin-left:1.5%;
+	border-radius: 50%;
+}
+
+button{
+	clear: both;
+	position: absolute;
+	top:70%;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
