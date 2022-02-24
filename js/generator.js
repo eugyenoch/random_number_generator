@@ -2,37 +2,47 @@
 * @title generator.js for random_number_generator
 * @description This software provides the styling for the random number generator
 * Copyright (c) 2022 Eugy Enoch
-*Permission is hereby granted, free of charge, to any person obtaining a copy
-*of this software and associated documentation files (the "Software"), to deal
-*in the Software without restriction, including without limitation the rights
-*to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-*copies of the Software, and to permit persons to whom the Software is
-*furnished to do so, subject to the following conditions:
-*The above copyright notice and this permission notice shall be included in all
-*copies or substantial portions of the Software.
-*THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-*IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-*FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-*AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-*LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-*OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-*SOFTWARE.
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
 * @contact https://github.com/eugyenoch
 */
- //"use strict" //strict mode
+ "use strict" //strict mode
+
+function clock(){
+	//Function to display time
+	let time = new Date();
+	let time_call = time.getHours() + ":" + time.getMinutes();
+	form.clock.value = time_call;
+}
+
+clock();
 
  function gen2(){
- 	timeout = setTimeout(function(){location.reload()},3000);
+ 	//Function to reload page and clear content
+ 	let timeout = setTimeout(function(){location.reload()},15000);
  }
 
 function gen(){
+	/*Function to generate random numbers 
+	* and also implement the reload page and clear content
+	* function above
+	*/
+
 	document.querySelector('.first').innerHTML = Math.floor(Math.random()*50);
 	document.querySelector('.second').innerHTML = Math.floor(Math.random()*50);
 	document.querySelector('.third').innerHTML = Math.floor(Math.random()*50);
 	document.querySelector('.fourth').innerHTML = Math.floor(Math.random()*50);
 	document.querySelector('.fifth').innerHTML = Math.floor(Math.random()*50);
 
-	form.display.value = "Number Generated";
+	form.display.value = "Number Displayed";
 
-	this.gen2();
+	document.querySelector('marquee').innerHTML = "Numbers will clear in 15 seconds";
+	gen2();
 }

@@ -9,16 +9,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Random Number Generator</title>
 	<link rel="icon" href="image/favicon.jpg">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--STYLESHEETS-->
 	<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">	
 </head>
 <body>
 <!-- <h1>RANDOM NUMBER GENERATOR</h1> -->
 <form name="form">
-	<input type="text" name="display" disabled>
+	<input class="display" type="text" name="display" disabled>
+	<input class="timer" type="text" name="clock" disabled>
 </form>
 
-	<div class="main">
+	<div id="main">
 		<div class="first"></div>
 		<div class="second"></div>
 		<div class="third"></div>
@@ -26,8 +30,17 @@
 		<div class="fifth"></div>
 	</div>
 
-	<center><button class="default" onclick="gen()">GENERATE</button></center>
-
+	<button class="default btnHover" onclick="gen()">GENERATE</button>
+	<footer>
+		<marquee></marquee>
+		<p>CREDITS:
+		<a href="https://www.facebook.com/eugyenoch">Facebook</a>
+		<a href="https://twitter.com/eugyenoch">Twitter</a>
+		<a href="https://www.linkedin.com/in/eugyenoch">LinkedIn</a>
+		<a href="https://www.instagram.com/eugyenoch">Instagram</a>
+		<a href="https://github.com/eugyenoch">GitHub</a>
+	</p>
+	</footer>
 	<script type="text/javascript" src="js/generator.js"></script>
 </body>
 </html>
